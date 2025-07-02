@@ -58,8 +58,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(@types/debug@4.1.12)(@types/node@20.14.11)(@vitest/browser@3.2.4)
       vitest-browser-qwik:
-        specifier: ^0.0.3
-        version: 0.0.3
+        specifier: ^0.0.5
+        version: 0.0.5
 
 packages:
 
@@ -2065,8 +2065,8 @@ packages:
       terser:
         optional: true
 
-  vitest-browser-qwik@0.0.3:
-    resolution: {integrity: sha512-CGs4by6WjSc5io5iQ27qIWzmtR0WoD9oGm5F8nWZvsV9UN46fpYzyqDF7TFG9bmpaoLcOfM9+S8O3YyJ4oEBoA==}
+  vitest-browser-qwik@0.0.5:
+    resolution: {integrity: sha512-9YA9zJLExV2YLsw3LQHC9r2qGKN6P1TaQzKvuiUxxKNfpc0pd7TO0+xFTQkMTrFW83oD4r5h4jwIoD6njkixEg==}
 
   vitest@3.2.4:
     resolution: {integrity: sha512-LUCP5ev3GURDysTWiP47wRRUpLKMOfPh+yKTx3kVIEiu5KOMeqzpnYNsKyOoVrULivR8tLcks4+lga33Whn90A==}
@@ -4583,7 +4583,7 @@ snapshots:
       '@types/node': 20.14.11
       fsevents: 2.3.3
 
-  vitest-browser-qwik@0.0.3: {}
+  vitest-browser-qwik@0.0.5: {}
 
   vitest@3.2.4(@types/debug@4.1.12)(@types/node@20.14.11)(@vitest/browser@3.2.4):
     dependencies:
