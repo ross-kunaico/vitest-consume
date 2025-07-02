@@ -4,5 +4,5 @@ import { Counter } from './fixtures/Counter';
 
 test('renders root with CSR', async () => {
   const screen = await render(<Counter initialCount={1} />);
-  await expect(true).toBeTruthy();
+  await expect.element(screen.getByText("Count is 1")).toBeVisible();
 });
