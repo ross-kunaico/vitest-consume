@@ -9,7 +9,7 @@ export const Counter = component$<{ initialCount: number }>(
 	({ initialCount = 0 }) => {
 		const count = useSignal(initialCount);
 
-		console.log("Counter component rendering on server side");
+		console.log("Counter component rendering");
 		console.log("Node.js environment:", typeof process !== "undefined");
 		console.log("Window object exists:", typeof window !== "undefined");
 		console.log("Initial count:", initialCount);
@@ -27,7 +27,10 @@ export const Counter = component$<{ initialCount: number }>(
 		return (
 			<>
 				<div>Count is {count.value}</div>
-				<button type="button" onClick$={() => count.value++}>
+				<button type="button" onClick$={() => {
+					console.log("Increment button clicked");
+					count.value++;
+				}}>
 					Increment
 				</button>
 			</>
