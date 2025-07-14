@@ -1,4 +1,4 @@
-// import { component$, useSignal } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import { page } from "@vitest/browser/context";
 import { expect, test } from "vitest";
 import { render } from "vitest-browser-qwik";
@@ -21,26 +21,26 @@ test("renders counter", async () => {
   await button.click();
   await expect.element(screen.getByText("Count is 2")).toBeVisible();
 });
-//
-// const InteractiveCounter = component$<{ initialCount: number }>(
-//   ({ initialCount = 0 }) => {
-//     const count = useSignal(initialCount);
-//
-//     return (
-//       <>
-//         <div>Count is {count.value}</div>
-//         <button type="button" onClick$={() => count.value++}>
-//           Increment
-//         </button>
-//       </>
-//     );
-//   },
-// );
-//
-// test("renders local counter", async () => {
-//   const screen = render(<InteractiveCounter initialCount={1} />);
-//
-//   await expect.element(screen.getByText("Count is 1")).toBeVisible();
-//   await screen.getByRole("button", { name: "Increment" }).click();
-//   await expect.element(screen.getByText("Count is 2")).toBeVisible();
-// });
+
+const InteractiveCounter = component$<{ initialCount: number }>(
+  ({ initialCount = 0 }) => {
+    const count = useSignal(initialCount);
+
+    return (
+      <>
+        <div>Count is {count.value}</div>
+        <button type="button" onClick$={() => count.value++}>
+          Increment
+        </button>
+      </>
+    );
+  },
+);
+
+test("renders local counter", async () => {
+  const screen = render(<InteractiveCounter initialCount={1} />);
+
+  await expect.element(screen.getByText("Count is 1")).toBeVisible();
+  await screen.getByRole("button", { name: "Increment" }).click();
+  await expect.element(screen.getByText("Count is 2")).toBeVisible();
+});
