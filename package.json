@@ -35,12 +35,13 @@
     "globals": "16.0.0",
     "playwright": "1.52.0",
     "prettier": "3.3.3",
+    "tsx": "^4.19.4",
     "typescript": "5.4.5",
     "typescript-eslint": "8.26.1",
     "undici": "*",
     "vite": "6.3.5",
     "vite-tsconfig-paths": "^4.2.1",
     "vitest": "^3.2.4",
-    "vitest-browser-qwik": "^0.0.7"
+    "vitest-browser-qwik": "^0.0.8"
   }
 }

@@ -1,8 +1,15 @@
-import { defineConfig } from 'vitest/config'
-import { qwikVite } from '@builder.io/qwik/optimizer'
+import { qwikVite } from "@builder.io/qwik/optimizer";
+import { register as handleTSXImports } from "tsx/esm/api";
+import { defineConfig } from "vitest/config";
+import { testSSR } from "vitest-browser-qwik/ssr-plugin";
+
+handleTSXImports();
 
 export default defineConfig({
-  plugins: [qwikVite()],
+  plugins: [
+    testSSR(),
+    qwikVite()
+  ],
   test: {
     browser: {
       enabled: true,
