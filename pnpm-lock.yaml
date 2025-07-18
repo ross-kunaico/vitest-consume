@@ -72,8 +72,8 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(@types/debug@4.1.12)(@types/node@22.15.32)(@vitest/browser@3.2.4)(tsx@4.20.3)
       vitest-browser-qwik:
-        specifier: ^0.0.7
-        version: 0.0.7(@builder.io/qwik@1.14.1(vite@6.3.5(@types/node@22.15.32)(tsx@4.20.3)))(@vitest/browser@3.2.4)(vitest@3.2.4)
+        specifier: ^0.0.8
+        version: 0.0.8(@builder.io/qwik@1.14.1(vite@6.3.5(@types/node@22.15.32)(tsx@4.20.3)))(@vitest/browser@3.2.4)(vite@6.3.5(@types/node@22.15.32)(tsx@4.20.3))(vitest@3.2.4)
 
 packages:
 
@@ -2233,11 +2233,12 @@ packages:
       yaml:
         optional: true
 
-  vitest-browser-qwik@0.0.7:
-    resolution: {integrity: sha512-yP/4hfnbNb1hKv//DbHE2LmKIKvap1bYEZkup5RbwTACtlpZ6K7zaKT6uAIc3lNPdwoD4meiM8D4bqi95D8/sg==}
+  vitest-browser-qwik@0.0.8:
+    resolution: {integrity: sha512-5zF+3uRPpJEc2rnAamSHZAyfk1XssIHPGcU9MvdV5/2EYLxqK+1GcKeS5uxh6Hd+xohk+wFmIULj1Ih4DDfI8A==}
     peerDependencies:
       '@builder.io/qwik': ^1.14.1
       '@vitest/browser': ^3.2.4
+      vite: '>=6.3.5'
       vitest: ^3.1.3
 
   vitest@3.2.4:
@@ -4884,10 +4885,13 @@ snapshots:
       fsevents: 2.3.3
       tsx: 4.20.3
 
-  vitest-browser-qwik@0.0.7(@builder.io/qwik@1.14.1(vite@6.3.5(@types/node@22.15.32)(tsx@4.20.3)))(@vitest/browser@3.2.4)(vitest@3.2.4):
+  vitest-browser-qwik@0.0.8(@builder.io/qwik@1.14.1(vite@6.3.5(@types/node@22.15.32)(tsx@4.20.3)))(@vitest/browser@3.2.4)(vite@6.3.5(@types/node@22.15.32)(tsx@4.20.3))(vitest@3.2.4):
     dependencies:
       '@builder.io/qwik': 1.14.1(vite@6.3.5(@types/node@22.15.32)(tsx@4.20.3))
       '@vitest/browser': 3.2.4(playwright@1.52.0)(vite@6.3.5(@types/node@22.15.32)(tsx@4.20.3))(vitest@3.2.4)
+      magic-string: 0.30.17
+      oxc-parser: 0.73.2
+      vite: 6.3.5(@types/node@22.15.32)(tsx@4.20.3)
       vitest: 3.2.4(@types/debug@4.1.12)(@types/node@22.15.32)(@vitest/browser@3.2.4)(tsx@4.20.3)
 
   vitest@3.2.4(@types/debug@4.1.12)(@types/node@22.15.32)(@vitest/browser@3.2.4)(tsx@4.20.3):
